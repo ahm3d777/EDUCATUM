@@ -9,103 +9,151 @@
     <meta name="description" content="Educatum academy">
     <meta property="og:title" content="Educatum academy|Live-Learn-Succeed">
     <meta property="og:description" content="Educatum academy">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> -->
+    <link rel="stylesheet" href="style3.css">
+    <!-- <script src="script.js" defer></script> -->
 </head>
 
 <body>
-    <div class="overlay" onclick="toggleOverlay()"></div>
+            <nav>
+             
+                
+                    <ul class="sidebar">
+                        
+                        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li> 
+                        <li><a href="home">home</a></li>
+                        <li><a href="Courses">Courses</a></li>  
+                        <li><a href="Learning Bites">Learning Bites</a></li> 
+                        <li><a href="Our Founder">Our Founder</a></li>  
+                        <li><a href="Testimonials">Testimonials</a></li>  
+                        <li><a href="Contact">Contact</a></li> 
+                          </ul>
+                    <ul>
+                        
+                        <li><a href="#"><img src="images/main-logo.png" alt="Your website logo" class="logo"></a></li>
+                        <li class="hideOnMobile"><a href="#">Home</a></li> 
+                        <li class="hideOnMobile"><a href="#">Courses</a></li>  
+                  <li class="hideOnMobile"><a href="#">Learning Bites</a></li> 
+                  <li class="hideOnMobile"><a href="#">Our Founder</a></li>  
+                  <li class="hideOnMobile"><a href="#">Testimonials</a></li>  
+                  <li class="hideOnMobile"><a href="#">Testimonials</a></li>  
+                  <li class="hideOnMobile"><a href="#">Contact</a></li> 
+                  <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li> 
+                    </ul>
+                  
+            </nav>
+            <script>
+                function showSidebar() {
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                    
+                }
+                function hideSidebar() {
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
 
-    <!-- Navigation Section -->
-    <header>
-        <nav class="stylish-navbar">
-            <img src="images/main-logo.png" alt="Your website logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="cta-button">Sign In</a></li>
-                <li><a href="#" class="cta-button">Enroll Now</a></li>
-            </ul>
-        </nav>
-    </header>
+         <div class="hero">
+            <div class="hero-contents">
+                <div class="hero-title">
+            <h1><span class="word1">Educatum</span> <span class="word2">Academy.</span></h1>
+            <h2>Master Your Mind, Excel Your Skills</h2></div>
+        
+        
+        <div class="desc">
+          <h2 >Learn in the Smartest Way: Where Knowledge Meets Innovation.</h2>
+            <p>Unlock your academic potential with expert exam preparation.</p>  
+        </div>
+            
+        </div>
 
-    <!-- Header Section -->
-    <header class="hero">
-        <h1><span class="word1">Educatum</span> <span class="word2">Academy.</span></h1>
-        <div class="hero-content">
         </div>
-        <h1>Master Your Mind, Excel Your Skills</h1>
-        <h2>- Learn in the Smartest Way: Where Knowledge Meets Innovation.</h2>
-        <p>Unlock your academic potential with expert exam preparation.</p>
-        <button class="cta">Start Your Free Trial</button>
-        <div class="progress-bar">
-            <span>95%</span> <p>Student Success Rate</p>
-        </div>
-    </header>
+    </div>
 
     <!-- course-category section -->
-    <section class="course-category">
+     <section class="course-category">
         <h2 class="section-heading">Explore Course Categories</h2>
         <div class="category-list">
             <div class="category-item science">
+                <img src="images/science.gif" alt="Science">
                 <h2>Science</h2>
                 <p>Explore the wonders of science and unlock your potential in various fields.</p>
+                <a href="#" class="btn">READ MORE</a>
             </div>
+
             <div class="category-item Business-Studies">
+                <img src="images/business studies.gif" alt="business studies">
                 <h2>Business Studies</h2>
                 <p>Develop the skills and knowledge to excel in the dynamic world of business.</p>
+                <a href="#" class="btn">READ MORE</a>
             </div>
+
             <div class="category-item Humanities">
+                <img src="images/humanities.gif" alt="Humanities">
                 <h2>Humanities</h2>
                 <p>Delve into the depths of human history, literature, and philosophy.</p>
+                <a href="#" class="btn">READ MORE</a>
             </div>
+
             <div class="category-item Group-Change">
+                <img src="images/group change.gif" alt="Group Change">
                 <h2>Group Change</h2>
                 <p>Discover effective strategies for personal and collective transformation.</p>
+                <a href="#" class="btn">READ MORE</a>
             </div>
+
             <div class="category-item Learn-English">
+                <img src="images/learn english.gif" alt="Learn English with Dr. Mahmud">
                 <h2>Learn English with Dr. Mahmud</h2>
                 <p>Master the English language with expert guidance from Dr. Mahmud.</p>
+                <a href="#" class="btn">READ MORE</a>
             </div>
+
             <div class="category-item HSC-Alim">
+                <img src="images/academics.gif" alt="HSC/Alim 2024/2025 (Academic)">
                 <h2>HSC/Alim 2024/2025 (Academic)</h2>
                 <p>Prepare for your academic success with comprehensive HSC/Alim resources.</p>
+                <a href="#" class="btn">READ MORE</a>
             </div>
         </div>
     </section>
-</section>
-<section>
-    <h2>Learning bites</h2>
-    <iframe width="33%" height="75%" src="https://www.youtube-nocookie.com/embed/CNDKKEFzTo8?si=KzL46aZsjqB86cIz&start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <br>
-    <br>
-    <iframe width="33%" height="75%" src="https://www.youtube.com/embed/d_b2PkCf0xY?si=poYIqxbmeun1zHD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <br>
-    <br>
-    <iframe width="33%" height="75%" src="https://www.youtube.com/embed/CSA_glTjMLA?si=_HSUiFEb3uqKGmNu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</section>
+    <!-- <section>
+        <h2>Learning bites</h2>
+        <div class="video-container">
+            <iframe width="33%" height="75%" src="https://www.youtube-nocookie.com/embed/CNDKKEFzTo8?si=KzL46aZsjqB86cIz&start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe width="33%" height="75%" src="https://www.youtube.com/embed/d_b2PkCf0xY?si=poYIqxbmeun1zHD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe width="33%" height="75%" src="https://www.youtube.com/embed/CSA_glTjMLA?si=_HSUiFEb3uqKGmNu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section> -->
+    
      
     <!-- founder section -->
-    <section>
-        <h2>
-            Our Founder
-        </h2>
-        <img src="images/Founder.jpg" width="30%" height="50%" alt="Mahmud Hasan Tabib">
-        <h3>Mahmud Hasan Tabib</h3>
-        <a href="https://www.youtube.com/@EducatumAcademy/featured" target="_blank" rel="noopener noreferrer">YouTube</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="https://www.facebook.com/groups/1012497550096936/user/100044125582080/" target="_blank" rel="noopener noreferrer">Founder</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="https://www.facebook.com/groups/1012497550096936" target="_blank" rel="noopener noreferrer">Facebook Page</a>
-
-        <h4>Young TEDx speaker and #1 Online JEE Educator | Founder of 5 YouTube Channels with 2.5 million young hustlers. </h4>
-        <h5>I help students across India find their right career path. I have been a guest speaker at 22 Colleges including Top IITs, BITS Pilani, IIIT's, NIT's, SRCC, Jadavpur University etc. I am the #1 Educator of JEE on India's biggest online platform
-            and I believe that everyone has the right to quality education and with the help of my social media platforms, I have helped millions of students find their path to success in the last 5 years. In the next few decades, India will rise
-            as the leader of the world with the maximum young workforce, but for this, we need some good pilots who can take us through this. I help these young hustlers find their true potential so that they can fly us to victory.</h5>
-    </section>
-
+     <section class="founder-section">
+        <h2>Our Founder</h2>
+        <div class="founder-content">
+            <img src="images/Founder.jpg" alt="Mahmud Hasan Tabib">
+            <h3>Mahmud Hasan Tabib</h3>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@EducatumAcademy/featured" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <span class="separator">|</span>
+                <a href="https://www.facebook.com/groups/1012497550096936/user/100044125582080/" target="_blank" rel="noopener noreferrer">Founder</a>
+                <span class="separator">|</span>
+                <a href="https://www.facebook.com/groups/1012497550096936" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+            </div>
+            <h4>Young TEDx speaker and #1 Online JEE Educator | Founder of 5 YouTube Channels with 2.5 million young hustlers.</h4>
+            <h5>I help students across India find their right career path...</h5>
+        </div>
+    </section> 
     <!-- Footer Section -->
-    <footer>
+     <footer>
         <a href="#">FAQ</a>
         <a href="#">Contact Us</a>
         <a href="#">Terms of Use</a>
