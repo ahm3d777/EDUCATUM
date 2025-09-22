@@ -1,236 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educatum academy| Live-Learn-Succeed</title>
-    <meta name="description" content="Educatum academy">
-    <meta name="description" content="Educatum academy">
-    <meta property="og:title" content="Educatum academy|Live-Learn-Succeed">
-    <meta property="og:description" content="Educatum academy">
-    <!-- <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-    rel="stylesheet"
-/> -->
-    <link rel="stylesheet" href="style3.css">
-    <!-- <script src="script.js" defer></script> -->
+    <title>Educatum Academy | Live-Learn-Succeed</title>
+    <meta name="description" content="Master Your Mind, Excel Your Skills - Expert exam preparation and innovative learning solutions">
+    <meta property="og:title" content="Educatum Academy | Live-Learn-Succeed">
+    <meta property="og:description" content="Unlock your academic potential with expert exam preparation">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 2rem;
+            transition: all 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            height: 45px;
+            width: auto;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: #4f46e5;
+            background: rgba(79, 70, 229, 0.1);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 300px;
+            background: white;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-top: 2rem;
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar.active {
+            right: 0;
+            display: flex;
+        }
+
+        .sidebar li {
+            width: 100%;
+        }
+
+        .sidebar li a {
+            width: 100%;
+            padding: 1rem 2rem;
+            display: block;
+            border-radius: 0;
+        }
+
+        .menu-button {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hideOnMobile {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .hideOnMobile {
+                display: none;
+            }
+            .menu-button {
+                display: block;
+            }
+            nav {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="2"/></g></g></svg>');
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-60px) translateY(-60px); }
+        }
+
+        .hero-contents {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        .word1 {
+            color: #fff;
+        }
+
+        .word2 {
+            color: #fbbf24;
+        }
+
+        .hero-title h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .desc h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #f8fafc;
+        }
+
+        .desc p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title h1 {
+                font-size: 2.5rem;
+            }
+            .desc h2 {
+                font-size: 1.5rem;
+            }
+            .hero {
+                padding: 100px 1rem 60px;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 2rem;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #1f2937;
+            position: relative;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            border-radius: 2px;
+        }
+
+        /* Course Categories */
+        .course-category {
+            background: #f8fafc;
+        }
+
+        .category-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .category-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .category-item h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .category-item p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+        }
+
+        /* Learning Bites */
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .video {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .video:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            border: none;
+        }
+
+        .video h3 {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        /* Teachers Section */
+        .teacher {
+            background: #f8fafc;
+            text-align: center;
+        }
+
+        .teacher .heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .teacher h3 {
+            color: #6b7280;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            border: 4px solid #f3f4f6;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .card p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .icon a {
+            color: #4f46e5;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .icon a:hover {
+            color: #7c3aed;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .founder-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #1f2937;
+        }
+
+        .founder-content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            border: 6px solid #f3f4f6;
+        }
+
+        .founder-content h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .social-links {
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #7c3aed;
+        }
+
+        .separator {
+            color: #6b7280;
+            margin: 0 1rem;
+        }
+
+        .founder-content h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .founder-content h5 {
+            font-size: 1.1rem;
+            color: #6b7280;
+            font-weight: 400;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fbbf24;
+        }
+
+        @media (max-width: 768px) {
+            footer a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-            <nav>
-             
-                
-                    <ul class="sidebar">
-                        
-                        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li> 
-                        <li><a href="home">Home</a></li>
-                        <li><a href="Courses">Courses</a></li>  
-                        <li><a href="Learning Bites">Learning Bites</a></li> 
-                        <li><a href="Our Founder">Our Founder</a></li>  
-                        <li><a href="Testimonials">Testimonials</a></li>  
-                        <li><a href="Contact">Contact</a></li> 
-                          </ul>
-                    <ul>
-                        
-                        <li><a href="#"><img src="images/main-logo.png" alt="Your website logo" class="logo"></a></li>
-                        <li class="hideOnMobile"><a href="#">Home</a></li> 
-                        <li class="hideOnMobile"><a href="#">Courses</a></li>  
-                  <li class="hideOnMobile"><a href="#">Learning Bites</a></li> 
-                  <li class="hideOnMobile"><a href="#">Our Founder</a></li>  
-                  <li class="hideOnMobile"><a href="#">Testimonials</a></li>  
-                  <li class="hideOnMobile"><a href="#">Testimonials</a></li>  
-                  <li class="hideOnMobile"><a href="#">Contact</a></li> 
-                  <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li> 
-                    </ul>
-                  
-            </nav>
-            <script>
-                function showSidebar() {
-                    const sidebar = document.querySelector('.sidebar')
-                    sidebar.style.display = 'flex'
-                    
-                }
-                function hideSidebar() {
-                    const sidebar = document.querySelector('.sidebar')
-                    sidebar.style.display = 'none'
-                }
-            </script>
+    <nav>
+        <ul class="sidebar" id="sidebar">
+            <li onclick="hideSidebar()">
+                <a href="#" style="margin-bottom: 2rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </a>
+            </li> 
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>  
+            <li><a href="#learning-bites">Learning Bites</a></li> 
+            <li><a href="#founder">Our Founder</a></li>  
+            <li><a href="#teachers">Teachers</a></li>  
+            <li><a href="#contact">Contact</a></li> 
+        </ul>
+        
+        <ul>
+            <li><a href="#"><img src="https://via.placeholder.com/150x60/4f46e5/ffffff?text=EDUCATUM" alt="Educatum Academy" class="logo"></a></li>
+            <li class="hideOnMobile"><a href="#home">Home</a></li> 
+            <li class="hideOnMobile"><a href="#courses">Courses</a></li>  
+            <li class="hideOnMobile"><a href="#learning-bites">Learning Bites</a></li> 
+            <li class="hideOnMobile"><a href="#founder">Our Founder</a></li>  
+            <li class="hideOnMobile"><a href="#teachers">Teachers</a></li>  
+            <li class="hideOnMobile"><a href="#contact">Contact</a></li> 
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li> 
+        </ul>
+    </nav>
 
-         <div class="hero">
-            <div class="hero-contents">
-                <div class="hero-title">
-            <h1><span class="word1">Educatum</span> <span class="word2">Academy.</span></h1>
-            <h2>Master Your Mind, Excel Your Skills</h2></div>
-        
-        
-        <div class="desc">
-          <h2 >Learn in the Smartest Way: Where Knowledge Meets Innovation.</h2>
-            <p>Unlock your academic potential with expert exam preparation.</p>  
-        </div>
+    <section class="hero" id="home">
+        <div class="hero-contents">
+            <div class="hero-title">
+                <h1><span class="word1">Educatum</span> <span class="word2">Academy</span></h1>
+                <h2>Master Your Mind, Excel Your Skills</h2>
+            </div>
             
+            <div class="desc">
+                <h2>Learn in the Smartest Way: Where Knowledge Meets Innovation</h2>
+                <p>Unlock your academic potential with expert exam preparation and innovative learning solutions designed for success.</p>  
+            </div>
         </div>
+    </section>
 
-        </div>
-    </div>
-
-    <!-- course-category section -->
-     <section class="course-category">
+    <section class="course-category" id="courses">
         <h2 class="section-heading">Explore Course Categories</h2>
         <div class="category-list">
             <div class="category-item science">
-                <img src="images/science.gif" alt="Science">
+                <img src="https://via.placeholder.com/80x80/4f46e5/ffffff?text=⚗️" alt="Science">
                 <h2>Science</h2>
-                <p>Explore the wonders of science and unlock your potential in various fields.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <p>Explore the wonders of science and unlock your potential in various scientific fields with comprehensive study materials.</p>
+                <a href="#" class="btn">Learn More</a>
             </div>
 
             <div class="category-item Business-Studies">
-                <img src="images/business studies.gif" alt="business studies">
+                <img src="https://via.placeholder.com/80x80/7c3aed/ffffff?text=📊" alt="Business Studies">
                 <h2>Business Studies</h2>
-                <p>Develop the skills and knowledge to excel in the dynamic world of business.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <p>Develop the skills and knowledge to excel in the dynamic world of business with practical insights and strategies.</p>
+                <a href="#" class="btn">Learn More</a>
             </div>
 
             <div class="category-item Humanities">
-                <img src="images/humanities.gif" alt="Humanities">
+                <img src="https://via.placeholder.com/80x80/059669/ffffff?text=📚" alt="Humanities">
                 <h2>Humanities</h2>
-                <p>Delve into the depths of human history, literature, and philosophy.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <p>Delve into the depths of human history, literature, and philosophy to broaden your cultural understanding.</p>
+                <a href="#" class="btn">Learn More</a>
             </div>
 
             <div class="category-item Group-Change">
-                <img src="images/group change.gif" alt="Group Change">
+                <img src="https://via.placeholder.com/80x80/dc2626/ffffff?text=🔄" alt="Group Change">
                 <h2>Group Change</h2>
-                <p>Discover effective strategies for personal and collective transformation.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <p>Discover effective strategies for personal and collective transformation through proven methodologies.</p>
+                <a href="#" class="btn">Learn More</a>
             </div>
 
             <div class="category-item Learn-English">
-                <img src="images/learn english.gif" alt="Learn English with Dr. Mahmud">
+                <img src="https://via.placeholder.com/80x80/ea580c/ffffff?text=🗣️" alt="Learn English">
                 <h2>Learn English with Dr. Mahmud</h2>
-                <p>Master the English language with expert guidance from Dr. Mahmud.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <p>Master the English language with expert guidance from Dr. Mahmud and achieve fluency faster.</p>
+                <a href="#" class="btn">Learn More</a>
             </div>
 
             <div class="category-item HSC-Alim">
-                <img src="images/academics.gif" alt="HSC/Alim 2024/2025 (Academic)">
+                <img src="https://via.placeholder.com/80x80/0891b2/ffffff?text=🎓" alt="HSC/Alim">
                 <h2>HSC/Alim 2024/2025 (Academic)</h2>
-                <p>Prepare for your academic success with comprehensive HSC/Alim resources.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <p>Prepare for your academic success with comprehensive HSC/Alim resources and expert guidance.</p>
+                <a href="#" class="btn">Learn More</a>
             </div>
         </div>
     </section>
-     <!-- LEARNING BITES SECTION -->
-     <section>
-        <h2>Learning bites</h2>
+
+    <section id="learning-bites">
+        <h2 class="section-heading">Learning Bites</h2>
         <div class="video-container">
             <div class="video">
-                <iframe src="https://www.youtube-nocookie.com/embed/CNDKKEFzTo8?si=KzL46aZsjqB86cIz&start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h3>Benzene preparation || Free Chemistry Class</h3>
+                <iframe src="https://www.youtube-nocookie.com/embed/CNDKKEFzTo8?si=KzL46aZsjqB86cIz&start=11" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Benzene Preparation || Free Chemistry Class</h3>
             </div>
             
-        </div>
-        <div class="video-container">
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/d_b2PkCf0xY?si=poYIqxbmeun1zHD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <H3>Tissue and Tissues || Free Biology Class</H3>
+                <iframe src="https://www.youtube.com/embed/d_b2PkCf0xY?si=poYIqxbmeun1zHD4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Tissue and Tissues || Free Biology Class</h3>
             </div>
             
-        </div>
-        <div class="video-container">
             <div class="video">
-                 <iframe src="https://www.youtube.com/embed/CSA_glTjMLA?si=_HSUiFEb3uqKGmNu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h3>Simple rules of physics diagrams || Basic to Boss</h3>
-        </div> 
+                <iframe src="https://www.youtube.com/embed/CSA_glTjMLA?si=_HSUiFEb3uqKGmNu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Simple Rules of Physics Diagrams || Basic to Boss</h3>
             </div>
-           
+        </div>
     </section>
-    
-     <!-- TEACHER SECTION START -->
 
-<section id="teacher" class="teacher">
+    <section id="teachers" class="teacher">
+        <h1 class="heading">Our Teachers</h1>
+        <h3>Meet Our Professional Trainers</h3> 
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/100x100/4f46e5/ffffff?text=T1" alt="Teacher 1">
+                <h3>Dr. Sarah Ahmed</h3>
+                <p>Chemistry Specialist - Making complex concepts simple</p>
+                <div class="icon">
+                    <a href="#" class="fab fa-facebook-f">📧</a>
+                </div>
+            </div>
 
+            <div class="card">
+                <img src="https://via.placeholder.com/100x100/7c3aed/ffffff?text=T2" alt="Teacher 2">
+                <h3>Prof. Karim Rahman</h3>
+                <p>Physics Expert - Teaching is my greatest passion</p>
+                <div class="icon">
+                    <a href="#" class="fab fa-facebook-f">📧</a>
+                </div>
+            </div>
 
+            <div class="card">
+                <img src="https://via.placeholder.com/100x100/059669/ffffff?text=T3" alt="Teacher 3">
+                <h3>Ms. Fatima Khan</h3>
+                <p>Biology Teacher - Making learning enjoyable and rewarding</p>
+                <div class="icon">
+                    <a href="#" class="fab fa-facebook-f">📧</a>
+                </div>
+            </div>
 
-    <h1 class="heading" >Our Teachers.</h1>
-    <h3>meet professional trainers</h3> 
-    <div class="card-container">
-
-        <div class="card">
-            <img src="images/t1.jpg" alt="">
-            <h3>someone's name</h3>
-            <p>I love teaching</p>
-            <div class="icon">
-                <a href="#" class="fab fa-facebook-f"></a>
+            <div class="card">
+                <img src="https://via.placeholder.com/100x100/dc2626/ffffff?text=T4" alt="Teacher 4">
+                <h3>Mr. Hassan Ali</h3>
+                <p>Mathematics Guru - Problem-solving made fun</p>
+                <div class="icon">
+                    <a href="#" class="fab fa-facebook-f">📧</a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card">
-            <img src="images/t2.jpg" alt="">
-            <h3>someone's name</h3>
-            <p>Teaching is my passion</p>
-            <div class="icon">
-                <a href="#" class="fab fa-facebook-f"></a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="images/t3.jpg" alt="">
-            <h3>someone's name</h3>
-            <p>Teaching is rewarding</p>
-            <div class="icon">
-                <a href="#" class="fab fa-facebook-f"></a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="images/t4.jpg" alt="">
-            <h3>someone's name</h3>
-            <p>Teaching is fun</p>
-            <div class="icon">
-                <a href="#" class="fab fa-facebook-f"></a>
-            </div>
-        </div>
-    </div>
-
-
-
-
-</section>
-
-     <!-- TEACHER SECTION END -->
-    
-     
-    <!-- founder section -->
-     <section class="founder-section">
+    <section class="founder-section" id="founder">
         <h2>Our Founder</h2>
         <div class="founder-content">
-            <img src="images/Founder.jpg" alt="Mahmud Hasan Tabib">
+            <img src="https://via.placeholder.com/200x200/4f46e5/ffffff?text=MHT" alt="Mahmud Hasan Tabib">
             <h3>Mahmud Hasan Tabib</h3>
             <div class="social-links">
-                <a href="https://www.youtube.com/@EducatumAcademy/featured" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://www.youtube.com/@EducatumAcademy/featured" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
                 <span class="separator">|</span>
-                <a href="https://www.facebook.com/groups/1012497550096936/user/100044125582080/" target="_blank" rel="noopener noreferrer">Founder</a>
+                <a href="https://www.facebook.com/groups/1012497550096936/user/100044125582080/" target="_blank" rel="noopener noreferrer">Founder Profile</a>
                 <span class="separator">|</span>
-                <a href="https://www.facebook.com/groups/1012497550096936" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+                <a href="https://www.facebook.com/groups/1012497550096936" target="_blank" rel="noopener noreferrer">Facebook Community</a>
             </div>
-            <h4>Young TEDx speaker and #1 Online JEE Educator | Founder of 5 YouTube Channels with 2.5 million young hustlers.</h4>
-            <h5>I help students across India find their right career path...</h5>
+            <h4>Young TEDx Speaker and #1 Online JEE Educator | Founder of 5 YouTube Channels with 2.5 Million Young Hustlers</h4>
+            <h5>Dedicated to helping students across the region find their right career path and achieve academic excellence through innovative teaching methods.</h5>
         </div>
-    </section> 
-    <!-- Footer Section -->
-     <footer>
+    </section>
+
+    <footer id="contact">
         <a href="#">FAQ</a>
         <a href="#">Contact Us</a>
         <a href="#">Terms of Use</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Refund Policy</a>
-        <a href="#">&copy; 2024 | Educatum Academy</a>
+        <a href="#">&copy; 2024 | Educatum Academy. All Rights Reserved.</a>
     </footer>
-    
 
-    <script src="script.js"></script>
+    <script>
+        function showSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.style.display = 'flex';
+            sidebar.classList.add('active');
+        }
+        
+        function hideSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.style.display = 'none';
+            sidebar.classList.remove('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close sidebar on mobile after clicking link
+                hideSidebar();
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
 </body>
-
 </html>
