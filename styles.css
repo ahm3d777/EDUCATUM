@@ -116,6 +116,7 @@ body {
     overflow-x: hidden;
     transition: var(--transition-smooth);
     min-height: 100vh;
+    padding-top: 70px;
 }
 
 [data-theme="dark"] body {
@@ -513,7 +514,6 @@ nav {
     position: relative;
     overflow: hidden;
     padding: 2rem;
-    padding-top: calc(70px + 2rem);
 }
 
 .hero-background {
@@ -1374,6 +1374,7 @@ footer {
     background: var(--neutral-900);
     color: var(--neutral-300);
     padding: 4rem 0 2rem;
+    margin-top: 4rem;
 }
 
 [data-theme="dark"] footer {
@@ -1603,7 +1604,6 @@ footer {
 
     .hero {
         padding: 1rem;
-        padding-top: calc(70px + 1rem);
     }
 
     .cta-button {
