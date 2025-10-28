@@ -116,7 +116,7 @@ body {
     overflow-x: hidden;
     transition: var(--transition-smooth);
     min-height: 100vh;
-    padding-top: 70px;
+    padding-top: 10px;
 }
 
 [data-theme="dark"] body {
