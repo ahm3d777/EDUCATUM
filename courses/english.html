@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English with Dr. Mahmud | Education</title>
+    <meta name="description" content="Master the English language with expert guidance from Dr. Mahmud. Comprehensive courses in grammar, speaking, writing, and literature.">
+    <link rel="canonical" href="https://education.com/courses/english.html">
+    <link rel="icon" href="../images/main-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .course-hero{min-height:60vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+        .course-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='white' opacity='0.05'%3E%3Ctext x='20' y='40' font-size='20' font-family='serif'%3EA%3C/text%3E%3Ctext x='60' y='70' font-size='15' font-family='serif'%3EB%3C/text%3E%3C/g%3E%3C/svg%3E");animation:float 20s ease-in-out infinite}
+        .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin:4rem 0}
+        .skill-card{padding:2.5rem;background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--border-radius-xl);text-align:center;transition:var(--transition-bounce)}
+        .skill-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-xl)}
+        .skill-card i{font-size:3rem;color:var(--gold-accent);margin-bottom:1.5rem}
+        .skill-card h3{font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1rem;color:var(--neutral-900)}
+        [data-theme="dark"] .skill-card h3{color:var(--dark-text)}
+        .levels-section{background:var(--neutral-100);padding:4rem 2rem;border-radius:var(--border-radius-xl);margin:4rem 0}
+        [data-theme="dark"] .levels-section{background:var(--dark-surface)}
+        .level-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem}
+        .level-card{padding:2rem;background:white;border-radius:var(--border-radius-lg);border-left:5px solid var(--gold-accent);transition:var(--transition-smooth)}
+        [data-theme="dark"] .level-card{background:var(--dark-surface-light)}
+        .level-card:hover{transform:translateX(10px);box-shadow:var(--shadow-lg)}
+        .level-card h4{color:var(--gold-accent);font-size:1.5rem;margin-bottom:1rem}
+        .cta-section{text-align:center;padding:4rem 2rem;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:var(--border-radius-xl);color:white}
+        .enroll-button{display:inline-flex;align-items:center;gap:0.5rem;padding:1.2rem 3rem;background:white;color:var(--neutral-900);border-radius:var(--border-radius-xl);text-decoration:none;font-weight:700;font-size:1.1rem;transition:var(--transition-bounce);margin-top:1rem}
+        .enroll-button:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <nav role="navigation"><div class="nav-container"><div class="logo-container"><a href="../index.html"><img src="../images/main-logo.png" alt="Education logo" class="logo" width="200" height="50"></a></div><ul class="nav-links hideOnMobile" role="menubar"><li role="none"><a href="../index.html#home" class="nav-link" role="menuitem">Home</a></li><li role="none"><a href="../index.html#courses" class="nav-link" role="menuitem">Courses</a></li><li role="none"><a href="../index.html#learning-bites" class="nav-link" role="menuitem">Learning Bites</a></li><li role="none"><a href="../index.html#founder" class="nav-link" role="menuitem">Our Founder</a></li><li role="none"><a href="../index.html#teachers" class="nav-link" role="menuitem">Teachers</a></li><li role="none"><a href="../index.html#contact" class="nav-link" role="menuitem">Contact</a></li></ul><div class="nav-controls"><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button><button class="menu-button" id="menuButton" aria-label="Open menu"><span></span><span></span><span></span></button></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-header"><button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button></div><ul class="sidebar-links"><li><a href="../index.html#home" class="sidebar-link">Home</a></li><li><a href="../index.html#courses" class="sidebar-link">Courses</a></li><li><a href="../index.html#learning-bites" class="sidebar-link">Learning Bites</a></li><li><a href="../index.html#founder" class="sidebar-link">Our Founder</a></li><li><a href="../index.html#teachers" class="sidebar-link">Teachers</a></li><li><a href="../index.html#contact" class="sidebar-link">Contact</a></li></ul></aside></nav>
+
+    <main id="main-content">
+        <section class="course-hero">
+            <div class="section-container" style="position:relative;z-index:2">
+                <h1 style="font-family:var(--font-heading);font-size:clamp(2.5rem,6vw,4.5rem);margin-bottom:1rem">Learn English with Dr. Mahmud</h1>
+                <p style="font-size:clamp(1.1rem,2.5vw,1.5rem);opacity:0.95;max-width:800px;margin:0 auto">Master the English language with innovative teaching methods and expert guidance</p>
+            </div>
+        </section>
+
+        <section style="padding:6rem 0">
+            <div class="section-container">
+                <h2 class="section-title" style="text-align:center;margin-bottom:3rem">Comprehensive English Mastery</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Speaking & Pronunciation</h3>
+                        <p>Develop fluency, confidence, and clear pronunciation through interactive practice sessions</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-headphones"></i>
+                        <h3>Listening Comprehension</h3>
+                        <p>Enhance your ability to understand English in various contexts and accents</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>Writing Skills</h3>
+                        <p>Master academic, creative, and professional writing techniques</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Reading & Literature</h3>
+                        <p>Improve reading comprehension and explore English literature</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-spell-check"></i>
+                        <h3>Grammar & Vocabulary</h3>
+                        <p>Build a strong foundation in English grammar and expand your vocabulary</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Exam Preparation</h3>
+                        <p>Prepare for IELTS, TOEFL, and other English proficiency exams</p>
+                    </div>
+                </div>
+
+                <div class="levels-section">
+                    <h2 class="section-title" style="text-align:center;margin-bottom:1rem">Course Levels</h2>
+                    <p style="text-align:center;color:var(--neutral-600);margin-bottom:2rem;max-width:700px;margin-left:auto;margin-right:auto">Choose the level that matches your current proficiency and goals</p>
+                    <div class="level-cards">
+                        <div class="level-card">
+                            <h4><i class="fas fa-seedling" style="margin-right:0.5rem"></i>Beginner</h4>
+                            <p style="margin-bottom:1.5rem">Perfect for those starting their English learning journey</p>
+                            <ul style="list-style:none;padding:0">
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Basic Grammar</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Essential Vocabulary</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Simple Conversations</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Pronunciation Basics</li>
+                            </ul>
+                        </div>
+                        <div class="level-card">
+                            <h4><i class="fas fa-chart-line" style="margin-right:0.5rem"></i>Intermediate</h4>
+                            <p style="margin-bottom:1.5rem">Build on your foundation and improve fluency</p>
+                            <ul style="list-style:none;padding:0">
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Advanced Grammar</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Expanded Vocabulary</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Fluent Conversations</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Writing Practice</li>
+                            </ul>
+                        </div>
+                        <div class="level-card">
+                            <h4><i class="fas fa-trophy" style="margin-right:0.5rem"></i>Advanced</h4>
+                            <p style="margin-bottom:1.5rem">Achieve mastery and native-like proficiency</p>
+                            <ul style="list-style:none;padding:0">
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Professional English</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Academic Writing</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Literary Analysis</li>
+                                <li style="padding:0.3rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Exam Excellence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--border-radius-xl);padding:3rem;margin:4rem 0">
+                    <div style="display:grid;grid-template-columns:150px 1fr;gap:2rem;align-items:center">
+                        <div style="text-align:center">
+                            <i class="fas fa-user-tie" style="font-size:5rem;color:var(--gold-accent)"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-family:var(--font-heading);font-size:2rem;margin-bottom:1rem;color:var(--neutral-900)">About Dr. Mahmud</h3>
+                            <p style="color:var(--neutral-600);line-height:1.8">Dr. Mahmud is a renowned English language educator with over 15 years of experience in teaching English to students of all levels. His innovative teaching methods combine traditional grammar instruction with modern communication techniques, ensuring students not only understand English but can use it confidently in real-world situations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2 style="font-family:var(--font-heading);font-size:2.5rem;margin-bottom:1rem">Start Your English Journey</h2>
+                    <p style="font-size:1.2rem">Join thousands of successful learners who have transformed their English skills</p>
+                    <a href="../index.html#contact" class="enroll-button"><span>Enroll Now</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" role="contentinfo"><div class="footer-container"><div class="footer-content"><div class="footer-brand"><img src="../images/main-logo.png" alt="Education" class="footer-logo" width="200" height="60"><p>Empowering minds, shaping futures through innovative education.</p></div><div class="footer-links"><nav class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html#courses">Courses</a></li><li><a href="../index.html#learning-bites">Learning Bites</a></li><li><a href="../index.html#founder">About Us</a></li><li><a href="../index.html#contact">Contact</a></li></ul></nav><nav class="footer-section"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Help Center</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Privacy Policy</a></li></ul></nav><div class="footer-section"><h4>Connect</h4><div class="footer-social"><a href="https://www.facebook.com/education" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://twitter.com/education" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a><a href="https://www.youtube.com/@Education" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a><a href="https://www.linkedin.com/company/education" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></div></div></div></div><div class="footer-bottom"><p>&copy; <span id="current-year">2024</span> Education. All rights reserved.</p></div></div></footer>
+
+    <script src="../script.js"></script>
+    <script>document.getElementById('current-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

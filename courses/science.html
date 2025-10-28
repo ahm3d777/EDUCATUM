@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Science Courses | Education - Master Physics, Chemistry & Biology</title>
+    <meta name="description" content="Explore comprehensive science courses in Physics, Chemistry, and Biology. Expert-led instruction to help you excel in your scientific journey.">
+    <meta name="keywords" content="science courses, physics, chemistry, biology, online science education, HSC science">
+
+    <link rel="canonical" href="https://education.com/courses/science.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/main-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .course-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='white' opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='80' cy='40' r='2'/%3E%3Ccircle cx='40' cy='60' r='2'/%3E%3Ccircle cx='90' cy='90' r='2'/%3E%3C/g%3E%3C/svg%3E");
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .course-content {
+            padding: 6rem 0;
+        }
+
+        .course-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .overview-card {
+            padding: 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius-xl);
+            text-align: center;
+            transition: var(--transition-bounce);
+        }
+
+        .overview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .overview-card i {
+            font-size: 3rem;
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .curriculum-section {
+            background: var(--neutral-100);
+            padding: 4rem 2rem;
+            border-radius: var(--border-radius-xl);
+            margin-bottom: 4rem;
+        }
+
+        [data-theme="dark"] .curriculum-section {
+            background: var(--dark-surface);
+        }
+
+        .subject-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-button {
+            padding: 1rem 2rem;
+            background: white;
+            border: 2px solid var(--neutral-300);
+            border-radius: var(--border-radius-lg);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .tab-button:hover,
+        .tab-button.active {
+            background: var(--gold-accent);
+            color: white;
+            border-color: var(--gold-accent);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .topic-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .topic-list li {
+            padding: 1rem;
+            background: white;
+            border-left: 4px solid var(--gold-accent);
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition-smooth);
+        }
+
+        [data-theme="dark"] .topic-list li {
+            background: var(--dark-surface-light);
+        }
+
+        .topic-list li:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--primary-gradient);
+            border-radius: var(--border-radius-xl);
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .enroll-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.2rem 3rem;
+            background: white;
+            color: var(--neutral-900);
+            border-radius: var(--border-radius-xl);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition-bounce);
+            margin-top: 1rem;
+        }
+
+        .enroll-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../index.html" aria-label="Education home page">
+                    <img src="../images/main-logo.png" alt="Education logo" class="logo" width="200" height="50">
+                </a>
+            </div>
+
+            <ul class="nav-links hideOnMobile" role="menubar">
+                <li role="none"><a href="../index.html#home" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../index.html#courses" class="nav-link" role="menuitem">Courses</a></li>
+                <li role="none"><a href="../index.html#learning-bites" class="nav-link" role="menuitem">Learning Bites</a></li>
+                <li role="none"><a href="../index.html#founder" class="nav-link" role="menuitem">Our Founder</a></li>
+                <li role="none"><a href="../index.html#teachers" class="nav-link" role="menuitem">Teachers</a></li>
+                <li role="none"><a href="../index.html#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-button" id="menuButton" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <aside class="sidebar" id="sidebar" role="dialog" aria-label="Mobile navigation menu">
+            <div class="sidebar-header">
+                <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="sidebar-links" role="menu">
+                <li role="none"><a href="../index.html#home" class="sidebar-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../index.html#courses" class="sidebar-link" role="menuitem">Courses</a></li>
+                <li role="none"><a href="../index.html#learning-bites" class="sidebar-link" role="menuitem">Learning Bites</a></li>
+                <li role="none"><a href="../index.html#founder" class="sidebar-link" role="menuitem">Our Founder</a></li>
+                <li role="none"><a href="../index.html#teachers" class="sidebar-link" role="menuitem">Teachers</a></li>
+                <li role="none"><a href="../index.html#contact" class="sidebar-link" role="menuitem">Contact</a></li>
+            </ul>
+        </aside>
+    </nav>
+
+    <main id="main-content">
+        <section class="course-hero">
+            <div class="section-container" style="position: relative; z-index: 2;">
+                <h1 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1rem;">Science Courses</h1>
+                <p style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); opacity: 0.95; max-width: 800px; margin: 0 auto;">
+                    Explore the wonders of science through our comprehensive Physics, Chemistry, and Biology courses
+                </p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="section-container">
+                <div class="course-overview">
+                    <div class="overview-card reveal-animation">
+                        <i class="fas fa-atom"></i>
+                        <h3>Physics</h3>
+                        <p>Master mechanics, electromagnetism, thermodynamics, and modern physics with expert guidance</p>
+                    </div>
+                    <div class="overview-card reveal-animation">
+                        <i class="fas fa-flask"></i>
+                        <h3>Chemistry</h3>
+                        <p>Dive into organic, inorganic, and physical chemistry with hands-on learning approaches</p>
+                    </div>
+                    <div class="overview-card reveal-animation">
+                        <i class="fas fa-dna"></i>
+                        <h3>Biology</h3>
+                        <p>Explore life sciences from cellular biology to ecology and human physiology</p>
+                    </div>
+                </div>
+
+                <div class="curriculum-section">
+                    <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Course Curriculum</h2>
+
+                    <div class="subject-tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'physics')">Physics</button>
+                        <button class="tab-button" onclick="openTab(event, 'chemistry')">Chemistry</button>
+                        <button class="tab-button" onclick="openTab(event, 'biology')">Biology</button>
+                    </div>
+
+                    <div id="physics" class="tab-content active">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--gold-accent);">Physics Topics</h3>
+                        <ul class="topic-list">
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Mechanics & Motion</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Electromagnetism</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Thermodynamics</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Waves & Optics</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Modern Physics</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Quantum Mechanics</li>
+                        </ul>
+                    </div>
+
+                    <div id="chemistry" class="tab-content">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--gold-accent);">Chemistry Topics</h3>
+                        <ul class="topic-list">
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Organic Chemistry</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Inorganic Chemistry</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Physical Chemistry</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Chemical Bonding</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Thermochemistry</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Electrochemistry</li>
+                        </ul>
+                    </div>
+
+                    <div id="biology" class="tab-content">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--gold-accent);">Biology Topics</h3>
+                        <ul class="topic-list">
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Cell Biology</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Genetics & Evolution</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Human Physiology</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Ecology & Environment</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Plant Biology</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>Microbiology</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Start Your Scientific Journey?</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join thousands of students mastering science with expert guidance</p>
+                    <a href="../index.html#contact" class="enroll-button">
+                        <span>Enroll Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../images/main-logo.png" alt="Education" class="footer-logo" width="200" height="60">
+                    <p>Empowering minds, shaping futures through innovative education.</p>
+                </div>
+
+                <div class="footer-links">
+                    <nav class="footer-section" aria-labelledby="quick-links-heading">
+                        <h4 id="quick-links-heading">Quick Links</h4>
+                        <ul>
+                            <li><a href="../index.html#courses">Courses</a></li>
+                            <li><a href="../index.html#learning-bites">Learning Bites</a></li>
+                            <li><a href="../index.html#founder">About Us</a></li>
+                            <li><a href="../index.html#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer-section" aria-labelledby="support-heading">
+                        <h4 id="support-heading">Support</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/education" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/education" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Education" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/education" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Education. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
