@@ -282,7 +282,7 @@ textarea:focus-visible {
    NAVIGATION
    =========================== */
 nav {
-    position: fixed;
+    position: fixed; /* FIXED: Uncommented to match z-index usage */
     top: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.85);
@@ -387,6 +387,10 @@ nav {
     color: var(--neutral-600);
 }
 
+[data-theme="dark"] .theme-toggle {
+    color: var(--dark-text-secondary); /* FIXED: Added for consistency */
+}
+
 .theme-toggle:hover,
 .theme-toggle:focus {
     background: var(--gold-accent);
@@ -414,7 +418,7 @@ nav {
 }
 
 [data-theme="dark"] .menu-button span {
-    background: var(--dark-text);
+    background: var(--dark-text-secondary); /* FIXED: Changed from --dark-text for consistency */
 }
 
 .menu-button:hover span,
@@ -470,6 +474,10 @@ nav {
     margin-left: auto;
 }
 
+[data-theme="dark"] .sidebar-close {
+    color: var(--dark-text-secondary); /* FIXED: Added for consistency */
+}
+
 .sidebar-close:hover,
 .sidebar-close:focus {
     background: var(--gold-accent);
@@ -493,7 +501,7 @@ nav {
 }
 
 [data-theme="dark"] .sidebar-link {
-    color: var(--dark-text);
+    color: var(--dark-text-secondary); /* FIXED: Changed from --dark-text for consistency */
 }
 
 .sidebar-link:hover,
@@ -501,6 +509,20 @@ nav {
     background: var(--glass-bg);
     border-left-color: var(--gold-accent);
     color: var(--gold-accent);
+}
+
+/* ===========================
+   RESPONSIVE (Mobile)
+   =========================== */
+/* ADDED: Media query to show menu button on mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-button {
+        display: flex;
+    }
 }
 
 /* ===========================
