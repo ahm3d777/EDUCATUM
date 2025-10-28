@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanities | Education - Literature, History & Philosophy</title>
+    <meta name="description" content="Explore human culture, history, literature, and philosophy with our comprehensive humanities courses.">
+    <link rel="canonical" href="https://education.com/courses/humanities.html">
+    <link rel="icon" href="../images/main-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .course-hero{min-height:60vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+        .course-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='white' opacity='0.05'%3E%3Crect x='20' y='30' width='60' height='2'/%3E%3Crect x='25' y='45' width='50' height='2'/%3E%3Crect x='20' y='60' width='55' height='2'/%3E%3C/g%3E%3C/svg%3E");animation:float 20s ease-in-out infinite}
+        .course-content{padding:6rem 0}
+        .topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin:4rem 0}
+        .topic-card{padding:2.5rem;background:var(--glass-bg);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--border-radius-xl);transition:var(--transition-bounce)}
+        .topic-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-xl)}
+        .topic-card i{font-size:2.5rem;color:var(--gold-accent);margin-bottom:1.5rem}
+        .topic-card h3{font-family:var(--font-heading);font-size:1.5rem;margin-bottom:1rem;color:var(--neutral-900)}
+        [data-theme="dark"] .topic-card h3{color:var(--dark-text)}
+        .cta-section{text-align:center;padding:4rem 2rem;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:var(--border-radius-xl);color:white;margin-top:4rem}
+        .enroll-button{display:inline-flex;align-items:center;gap:0.5rem;padding:1.2rem 3rem;background:white;color:var(--neutral-900);border-radius:var(--border-radius-xl);text-decoration:none;font-weight:700;font-size:1.1rem;transition:var(--transition-bounce);margin-top:1rem}
+        .enroll-button:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <nav role="navigation"><div class="nav-container"><div class="logo-container"><a href="../index.html"><img src="../images/main-logo.png" alt="Education logo" class="logo" width="200" height="50"></a></div><ul class="nav-links hideOnMobile" role="menubar"><li role="none"><a href="../index.html#home" class="nav-link" role="menuitem">Home</a></li><li role="none"><a href="../index.html#courses" class="nav-link" role="menuitem">Courses</a></li><li role="none"><a href="../index.html#learning-bites" class="nav-link" role="menuitem">Learning Bites</a></li><li role="none"><a href="../index.html#founder" class="nav-link" role="menuitem">Our Founder</a></li><li role="none"><a href="../index.html#teachers" class="nav-link" role="menuitem">Teachers</a></li><li role="none"><a href="../index.html#contact" class="nav-link" role="menuitem">Contact</a></li></ul><div class="nav-controls"><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button><button class="menu-button" id="menuButton" aria-label="Open menu"><span></span><span></span><span></span></button></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-header"><button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button></div><ul class="sidebar-links"><li><a href="../index.html#home" class="sidebar-link">Home</a></li><li><a href="../index.html#courses" class="sidebar-link">Courses</a></li><li><a href="../index.html#learning-bites" class="sidebar-link">Learning Bites</a></li><li><a href="../index.html#founder" class="sidebar-link">Our Founder</a></li><li><a href="../index.html#teachers" class="sidebar-link">Teachers</a></li><li><a href="../index.html#contact" class="sidebar-link">Contact</a></li></ul></aside></nav>
+
+    <main id="main-content">
+        <section class="course-hero">
+            <div class="section-container" style="position:relative;z-index:2">
+                <h1 style="font-family:var(--font-heading);font-size:clamp(2.5rem,6vw,4.5rem);margin-bottom:1rem">Humanities Courses</h1>
+                <p style="font-size:clamp(1.1rem,2.5vw,1.5rem);opacity:0.95;max-width:800px;margin:0 auto">Delve into human history, literature, philosophy, and cultural studies to understand our world</p>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="section-container">
+                <div class="topic-grid">
+                    <div class="topic-card reveal-animation">
+                        <i class="fas fa-book"></i>
+                        <h3>Literature & Language</h3>
+                        <p>Explore classical and modern literature, literary criticism, and advanced language studies from various cultures and periods.</p>
+                        <ul style="list-style:none;padding:0;margin-top:1.5rem">
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>World Literature</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Literary Analysis</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Creative Writing</li>
+                        </ul>
+                    </div>
+                    <div class="topic-card reveal-animation">
+                        <i class="fas fa-landmark"></i>
+                        <h3>History</h3>
+                        <p>Journey through world history, understanding civilizations, major events, and their impact on modern society.</p>
+                        <ul style="list-style:none;padding:0;margin-top:1.5rem">
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Ancient Civilizations</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Modern History</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Historical Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="topic-card reveal-animation">
+                        <i class="fas fa-brain"></i>
+                        <h3>Philosophy</h3>
+                        <p>Explore fundamental questions about existence, knowledge, values, reason, mind, and language.</p>
+                        <ul style="list-style:none;padding:0;margin-top:1.5rem">
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Ethics & Morality</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Logic & Reasoning</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Political Philosophy</li>
+                        </ul>
+                    </div>
+                    <div class="topic-card reveal-animation">
+                        <i class="fas fa-users"></i>
+                        <h3>Sociology & Culture</h3>
+                        <p>Study human society, social relationships, cultural diversity, and social structures.</p>
+                        <ul style="list-style:none;padding:0;margin-top:1.5rem">
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Cultural Studies</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Social Theory</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Anthropology</li>
+                        </ul>
+                    </div>
+                    <div class="topic-card reveal-animation">
+                        <i class="fas fa-palette"></i>
+                        <h3>Arts & Aesthetics</h3>
+                        <p>Appreciate and analyze visual arts, music, theater, and their role in human expression.</p>
+                        <ul style="list-style:none;padding:0;margin-top:1.5rem">
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Art History</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Music Theory</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Theater Studies</li>
+                        </ul>
+                    </div>
+                    <div class="topic-card reveal-animation">
+                        <i class="fas fa-globe"></i>
+                        <h3>Religious Studies</h3>
+                        <p>Explore world religions, spiritual traditions, and their influence on culture and society.</p>
+                        <ul style="list-style:none;padding:0;margin-top:1.5rem">
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Comparative Religion</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Theology</li>
+                            <li style="padding:0.5rem 0"><i class="fas fa-check" style="color:var(--gold-accent);margin-right:0.5rem"></i>Spiritual Philosophy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2 style="font-family:var(--font-heading);font-size:2.5rem;margin-bottom:1rem">Expand Your Worldview</h2>
+                    <p style="font-size:1.2rem">Join us in exploring the rich tapestry of human culture and thought</p>
+                    <a href="../index.html#contact" class="enroll-button"><span>Enroll Now</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" role="contentinfo"><div class="footer-container"><div class="footer-content"><div class="footer-brand"><img src="../images/main-logo.png" alt="Education" class="footer-logo" width="200" height="60"><p>Empowering minds, shaping futures through innovative education.</p></div><div class="footer-links"><nav class="footer-section"><h4>Quick Links</h4><ul><li><a href="../index.html#courses">Courses</a></li><li><a href="../index.html#learning-bites">Learning Bites</a></li><li><a href="../index.html#founder">About Us</a></li><li><a href="../index.html#contact">Contact</a></li></ul></nav><nav class="footer-section"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Help Center</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Privacy Policy</a></li></ul></nav><div class="footer-section"><h4>Connect</h4><div class="footer-social"><a href="https://www.facebook.com/education" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://twitter.com/education" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a><a href="https://www.youtube.com/@Education" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a><a href="https://www.linkedin.com/company/education" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></div></div></div></div><div class="footer-bottom"><p>&copy; <span id="current-year">2024</span> Education. All rights reserved.</p></div></div></footer>
+
+    <script src="../script.js"></script>
+    <script>document.getElementById('current-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
