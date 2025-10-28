@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Education - Science Course Page
+    Version: 2.0
+    Standards: HTML5, WCAG 2.1 Level AA, SEO Optimized
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Science Courses | Physics, Chemistry & Biology | Education</title>
+    <meta name="title" content="Science Courses | Physics, Chemistry & Biology | Education">
+    <meta name="description" content="Master Physics, Chemistry, and Biology with expert instructors at Education. Comprehensive science courses designed for HSC, Alim, and competitive exam preparation.">
+    <meta name="keywords" content="science courses, physics classes, chemistry online, biology tutoring, HSC science, online science education">
+    <meta name="author" content="Education">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://education.com/courses/science">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://education.com/courses/science">
+    <meta property="og:title" content="Science Courses | Physics, Chemistry & Biology">
+    <meta property="og:description" content="Master Physics, Chemistry, and Biology with expert instructors. Enroll today!">
+    <meta property="og:image" content="https://education.com/images/science-course.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Science Courses | Education">
+    <meta name="twitter:description" content="Master Physics, Chemistry, and Biology with expert instructors.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/main-logo.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Course Page Specific Styles -->
+    <style>
+        .course-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 150px 2rem 100px;
+            color: white;
+            text-align: center;
+        }
+
+        .course-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-heading);
+        }
+
+        .course-hero p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .course-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .course-stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .course-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: var(--transition-bounce);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .curriculum-section {
+            background: var(--neutral-100);
+            padding: 6rem 0;
+        }
+
+        [data-theme="dark"] .curriculum-section {
+            background: var(--dark-surface);
+        }
+
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .subject-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-bounce);
+        }
+
+        [data-theme="dark"] .subject-card {
+            background: var(--dark-surface-light);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .subject-card h3 {
+            color: var(--gold-accent);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid var(--neutral-200);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        [data-theme="dark"] .topic-list li {
+            border-bottom-color: var(--dark-surface);
+        }
+
+        .topic-list li:last-child {
+            border-bottom: none;
+        }
+
+        .topic-list i {
+            color: var(--gold-accent);
+        }
+
+        .pricing-section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .pricing-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            margin: 1rem 0;
+        }
+
+        .price-period {
+            font-size: 1.2rem;
+            color: var(--neutral-600);
+        }
+
+        [data-theme="dark"] .price-period {
+            color: var(--dark-text-secondary);
+        }
+
+        .enroll-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gold-accent);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: var(--border-radius-xl);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            transition: var(--transition-bounce);
+            border: none;
+            cursor: pointer;
+        }
+
+        .enroll-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+            background: var(--gold-dark);
+        }
+
+        .testimonials-section {
+            background: var(--neutral-100);
+            padding: 6rem 0;
+        }
+
+        [data-theme="dark"] .testimonials-section {
+            background: var(--dark-surface);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        [data-theme="dark"] .testimonial-card {
+            background: var(--dark-surface-light);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--neutral-900);
+        }
+
+        [data-theme="dark"] .author-name {
+            color: var(--dark-text);
+        }
+
+        .author-title {
+            font-size: 0.9rem;
+            color: var(--neutral-600);
+        }
+
+        [data-theme="dark"] .author-title {
+            color: var(--dark-text-secondary);
+        }
+
+        .stars {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .faq-section {
+            padding: 6rem 0;
+        }
+
+        .faq-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .course-stats {
+                gap: 1.5rem;
+            }
+
+            .curriculum-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../index.html" aria-label="Education home page">
+                    <img src="../images/main-logo.png" alt="Education logo" class="logo" width="200" height="50">
+                </a>
+            </div>
+
+            <ul class="nav-links hideOnMobile" role="menubar">
+                <li role="none"><a href="../index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../index.html#courses" class="nav-link" role="menuitem">Courses</a></li>
+                <li role="none"><a href="../index.html#learning-bites" class="nav-link" role="menuitem">Learning Bites</a></li>
+                <li role="none"><a href="../index.html#founder" class="nav-link" role="menuitem">Our Founder</a></li>
+                <li role="none"><a href="../index.html#teachers" class="nav-link" role="menuitem">Teachers</a></li>
+                <li role="none"><a href="../index.html#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="menu-button" id="menuButton" aria-label="Open navigation menu" aria-expanded="false" title="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Sidebar -->
+        <aside class="sidebar" id="sidebar" role="dialog" aria-label="Mobile navigation menu" aria-modal="false">
+            <div class="sidebar-header">
+                <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu" title="Close menu">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <ul class="sidebar-links" role="menu">
+                <li role="none"><a href="../index.html" class="sidebar-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../index.html#courses" class="sidebar-link" role="menuitem">Courses</a></li>
+                <li role="none"><a href="../index.html#learning-bites" class="sidebar-link" role="menuitem">Learning Bites</a></li>
+                <li role="none"><a href="../index.html#founder" class="sidebar-link" role="menuitem">Our Founder</a></li>
+                <li role="none"><a href="../index.html#teachers" class="sidebar-link" role="menuitem">Teachers</a></li>
+                <li role="none"><a href="../index.html#contact" class="sidebar-link" role="menuitem">Contact</a></li>
+            </ul>
+        </aside>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Course Hero -->
+        <section class="course-hero">
+            <div class="course-badge" aria-label="Best seller badge">⭐ Best Seller Course</div>
+            <h1>Science Courses</h1>
+            <p>Master Physics, Chemistry, and Biology with expert guidance. Comprehensive courses designed for HSC, Alim, and competitive exam preparation.</p>
+
+            <div class="course-stats">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Students Enrolled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Course Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Video Lessons</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Features -->
+        <section style="padding: 6rem 0;">
+            <div class="section-container">
+                <header class="section-header">
+                    <h2 class="section-title">Why Choose Our Science Courses?</h2>
+                    <p class="section-subtitle">Comprehensive learning experience designed for your success</p>
+                </header>
+
+                <div class="course-features">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from experienced teachers with proven track records in science education</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>HD Video Lessons</h3>
+                        <p>Access high-quality video content anytime, anywhere, on any device</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Study Materials</h3>
+                        <p>Downloadable PDFs, practice questions, and exam-focused content</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Lab Demonstrations</h3>
+                        <p>Virtual lab experiments and practical demonstrations for better understanding</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Practice Tests</h3>
+                        <p>Regular quizzes and mock exams to track your progress</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Get your questions answered by our dedicated support team</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section class="curriculum-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <h2 class="section-title">Course Curriculum</h2>
+                    <p class="section-subtitle">Comprehensive coverage of all three science subjects</p>
+                </header>
+
+                <div class="curriculum-grid">
+                    <!-- Physics -->
+                    <article class="subject-card">
+                        <h3><i class="fas fa-atom"></i> Physics</h3>
+                        <ul class="topic-list">
+                            <li><i class="fas fa-check"></i> Mechanics & Motion</li>
+                            <li><i class="fas fa-check"></i> Work, Energy & Power</li>
+                            <li><i class="fas fa-check"></i> Thermodynamics</li>
+                            <li><i class="fas fa-check"></i> Waves & Sound</li>
+                            <li><i class="fas fa-check"></i> Light & Optics</li>
+                            <li><i class="fas fa-check"></i> Electricity & Magnetism</li>
+                            <li><i class="fas fa-check"></i> Modern Physics</li>
+                            <li><i class="fas fa-check"></i> Nuclear Physics</li>
+                        </ul>
+                    </article>
+
+                    <!-- Chemistry -->
+                    <article class="subject-card">
+                        <h3><i class="fas fa-flask"></i> Chemistry</h3>
+                        <ul class="topic-list">
+                            <li><i class="fas fa-check"></i> Atomic Structure</li>
+                            <li><i class="fas fa-check"></i> Chemical Bonding</li>
+                            <li><i class="fas fa-check"></i> States of Matter</li>
+                            <li><i class="fas fa-check"></i> Chemical Reactions</li>
+                            <li><i class="fas fa-check"></i> Organic Chemistry</li>
+                            <li><i class="fas fa-check"></i> Electrochemistry</li>
+                            <li><i class="fas fa-check"></i> Physical Chemistry</li>
+                            <li><i class="fas fa-check"></i> Environmental Chemistry</li>
+                        </ul>
+                    </article>
+
+                    <!-- Biology -->
+                    <article class="subject-card">
+                        <h3><i class="fas fa-dna"></i> Biology</h3>
+                        <ul class="topic-list">
+                            <li><i class="fas fa-check"></i> Cell Biology</li>
+                            <li><i class="fas fa-check"></i> Genetics & Evolution</li>
+                            <li><i class="fas fa-check"></i> Human Physiology</li>
+                            <li><i class="fas fa-check"></i> Plant Biology</li>
+                            <li><i class="fas fa-check"></i> Ecology & Environment</li>
+                            <li><i class="fas fa-check"></i> Biotechnology</li>
+                            <li><i class="fas fa-check"></i> Microbiology</li>
+                            <li><i class="fas fa-check"></i> Reproduction & Development</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <h2 class="section-title">Course Pricing</h2>
+                    <p class="section-subtitle">Invest in your future with our affordable pricing</p>
+                </header>
+
+                <div class="pricing-card">
+                    <h3>Complete Science Package</h3>
+                    <div class="price">৳4,999</div>
+                    <div class="price-period">per month</div>
+                    <ul class="topic-list" style="text-align: left; margin: 2rem 0;">
+                        <li><i class="fas fa-check"></i> Access to all 3 subjects</li>
+                        <li><i class="fas fa-check"></i> 200+ video lessons</li>
+                        <li><i class="fas fa-check"></i> Downloadable study materials</li>
+                        <li><i class="fas fa-check"></i> Practice tests & quizzes</li>
+                        <li><i class="fas fa-check"></i> Live doubt clearing sessions</li>
+                        <li><i class="fas fa-check"></i> Certificate of completion</li>
+                        <li><i class="fas fa-check"></i> Lifetime access to recordings</li>
+                    </ul>
+                    <button class="enroll-btn" onclick="alert('Enrollment feature coming soon!')">
+                        <span>Enroll Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <h2 class="section-title">What Our Students Say</h2>
+                    <p class="section-subtitle">Real success stories from our science students</p>
+                </header>
+
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The Physics course helped me understand complex concepts easily. The video demonstrations were excellent!"</p>
+                        <div class="testimonial-author">
+                            <div>
+                                <div class="author-name">Rahim Ahmed</div>
+                                <div class="author-title">HSC Science Student</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Chemistry became my favorite subject after joining this course. The organic chemistry section is particularly outstanding."</p>
+                        <div class="testimonial-author">
+                            <div>
+                                <div class="author-name">Fatima Khan</div>
+                                <div class="author-title">Alim Student</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Biology lessons are very detailed and well-explained. I scored A+ in my final exams thanks to this course!"</p>
+                        <div class="testimonial-author">
+                            <div>
+                                <div class="author-name">Sabbir Rahman</div>
+                                <div class="author-title">HSC Graduate</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Got questions? We've got answers</p>
+                </header>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            <span>How long do I have access to the course?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            You get lifetime access to all course recordings and materials. You can learn at your own pace and revisit lessons anytime.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            <span>Can I take individual subjects instead of all three?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, we offer individual subject packages at ৳1,999 per subject per month. However, the complete package offers the best value.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            <span>Are the courses suitable for HSC and Alim students?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Absolutely! Our curriculum is designed to cover both HSC and Alim syllabi comprehensively.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            <span>Do you provide doubt clearing sessions?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, we conduct live doubt clearing sessions every week where you can ask questions directly to our instructors.
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="this.classList.toggle('active')">
+                        <div class="faq-question">
+                            <span>Will I get a certificate after completing the course?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, you'll receive a certificate of completion after finishing all modules and passing the final assessment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../images/main-logo.png" alt="Education" class="footer-logo" width="200" height="60">
+                    <p>Empowering minds, shaping futures through innovative education.</p>
+                </div>
+
+                <div class="footer-links">
+                    <nav class="footer-section" aria-labelledby="quick-links-heading">
+                        <h4 id="quick-links-heading">Quick Links</h4>
+                        <ul>
+                            <li><a href="../index.html#courses">Courses</a></li>
+                            <li><a href="../index.html#learning-bites">Learning Bites</a></li>
+                            <li><a href="../index.html#founder">About Us</a></li>
+                            <li><a href="../index.html#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer-section" aria-labelledby="support-heading">
+                        <h4 id="support-heading">Support</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/education" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/education" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Education" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Education. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../script.js" defer></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

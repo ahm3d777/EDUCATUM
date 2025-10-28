@@ -116,6 +116,9 @@ body {
     overflow-x: hidden;
     transition: var(--transition-smooth);
     min-height: 100vh;
+    /* Fixed: Ensure footer stays at bottom */
+    display: flex;
+    flex-direction: column;
 }
 
 [data-theme="dark"] body {
@@ -726,6 +729,20 @@ nav {
 /* ===========================
    SECTION STYLES
    =========================== */
+
+/* Fixed: Make main content grow to push footer down */
+main {
+    flex: 1 0 auto;
+}
+
+nav {
+    flex-shrink: 0;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
 .section-container {
     max-width: var(--container-max-width);
     margin: 0 auto;
